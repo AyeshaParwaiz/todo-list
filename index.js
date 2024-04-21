@@ -1,4 +1,4 @@
-#!usr/bin/env node
+#! /usr/bin/env node
 import inquirer from "inquirer";
 let todos = [];
 let condition = true;
@@ -6,8 +6,9 @@ while (condition) {
     let task = await inquirer.prompt([
         {
             name: "todo",
-            type: "input",
-            message: "What you want to add in your Todos?"
+            type: "list",
+            message: "What do you want to add in your Todos?",
+            choices: ["Salah", "Fast", "Predawn Meal", "Seclusion", "Recitation", "Vigil"]
         },
         {
             name: "addMore",
